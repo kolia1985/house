@@ -1,0 +1,5 @@
+<h3 class="header {{ css_class }}">
+    <span class="arrow span-5">&nbsp;</span>
+    <span class="title {% if text %}span-70{% else %}span-95{% endif %}">{{ title }}</span>
+    {% if text %}<span class="action span-25"><a href="{{ url }}">{{ text }}</a></span>{% endif %}
+</h3>

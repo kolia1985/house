@@ -1,0 +1,38 @@
+{% load i18n %}
+{% for field, val_field, val_min_field, val_max_field in fields %}
+    <li class="clearfix">
+        <div class="span-10">
+            {{ field }}
+            {{ field.errors }}
+        </div>
+        <div class="span-90"><div class="label">
+            {% if field.field.required %}*{% endif %}{{ field.label_tag }}
+        </div></div>
+    </li>
+    {% if val_field %}
+        <li class="clearfix">
+            <div class="span-90 prepend-10">
+                {{ val_field }}
+                {{ val_field.errors }}
+            </div>
+        </li>
+    {% endif%}
+    {% if val_min_field %}
+        <li class="clearfix">
+        <div class="span-15 prepend-10"><div class="label">
+            {% trans "From" %}:
+        </div></div>
+        <div class="span-30">
+            {{ val_min_field }}
+            {{ val_min_field.errors }}
+        </div>
+        <div class="span-10"><div class="label">
+            {% trans "To" %}:
+        </div></div>
+        <div class="span-35">
+            {{ val_max_field }}
+            {{ val_max_field.errors }}
+        </div>
+        </li>
+    {% endif%}
+{% endfor %}

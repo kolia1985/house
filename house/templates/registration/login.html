@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n form_extras %}
+{% block extra_document_ready %}
+    $('#loginform').submit(function(){
+        this.blur();
+    })
+{% endblock %}
+{% block content %}
+    <form class="standart-form" method="POST" name="loginform" action="{% url auth_login %}?next={{ next }}">
+        <div class="span-40 prepend-30 append-30"><fieldset>
+            <ul class="fields">
+            {% render_fields form %}
+            </ul>
+            <div class="actions">
+                <input id="loginform-submit" type="submit" value="{% trans "Login" %}" />
+            </div>
+        </div></fieldset>
+    </form>
+{% endblock %}

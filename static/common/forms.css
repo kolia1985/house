@@ -1,0 +1,55 @@
+label, div.label {
+    font-weight: normal;
+    font-size: 11px;
+    color: #333333;
+}
+form {
+    line-height: 3;
+}
+form ul.fields, 
+  div ul.fields {
+    list-style-type: none;
+    padding: 0 0 20px 0;
+    margin: 0;
+}
+
+form ul.fields li, 
+  div ul.fields li {
+    padding: 0;
+    margin: 0;
+}
+form .fields .label form .field .label, 
+  div .fields .label form .field .label{
+    padding-top: 4px;
+    line-height: 1;
+}
+form .fields .errorlist li {
+    padding: 5px 0 0 0;
+    margin: 0;
+}
+form .fields input[type=text],form .fields  input[type=password],
+form .fields textarea, form .fields select {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 2px;
+}
+form .actions {
+    text-align: right;
+}
+
+legend {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.form_info {
+    line-height: 1.5;
+}

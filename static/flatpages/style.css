@@ -1,0 +1,11 @@
+h1 {
+    margin: 10px 0;
+}
+
+.author, .position {
+    font-weight: bold;
+}
+
+.author {
+    font-size: 120%;
+}

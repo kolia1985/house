@@ -1,0 +1,28 @@
+# -*- makefile -*-
+# Copyright (C) 2001-2009 KDS software, 42 coffee cups.
+
+##### copy this file to Makefile.def and set BASE path to you own project directory
+
+customer=seesaw
+projshort=roa
+proj=$(customer)-$(projshort)
+ver=$(shell ./print_version.sh)
+app=roa
+deployto=lp.khavr.com
+
+BASE=/usr/local/lib/staging/roa/$(proj)
+SITE=/usr/local/lib/staging/roa/$(proj)/lib:/usr/local/lib/staging/roa/site-packages
+PYTHONPATH=$(BASE):$(SITE)
+PYTHON=$(PYTHONPATH) python
+processes=1
+
+SERVER=0.0.0.0
+PORT=8035
+
+settings=$(app).settings
+test_settings=$(app).settings
+
+### Local variables: ***
+### compile-command:"make" ***
+### tab-width: 2 ***
+### End: ***

@@ -1,0 +1,16 @@
+form .fields input.currencyfield[type="text"]  {
+    width: 50px;
+}
+
+form .fields input.datefield[type="text"] {
+    width: 55px;
+}
+
+form .fields input[type="text"] {
+    width: 50px;
+}
+
+form .fields ul {
+    list-style-type: none;
+    padding-left: 0;
+}

@@ -1,0 +1,274 @@
+body {
+    background-color: #c0c0c0;
+    color: #282828;
+    font-family: Arial;
+    font-size: 11px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 24px;
+    color: #99cc33;
+}
+h3 {
+    font-family: Geneva;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h3.title {
+    line-height: 35px;
+    font-size: 12px;
+    background: #EEEEEE url('img/accordion-header.png') repeat-x;
+    height: 35px;
+    padding:0 5px;
+    text-transform: uppercase;
+}
+
+h6 {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+input[type="button"], input[type="submit"], .btn, .btn:hover {
+	color: #547721;
+	font-size: 12px;
+	background: transparent url('img/btn.png') repeat-x;
+	border: 1px solid #AFCC99;
+	
+}
+
+.btn {
+	padding: 2px 5px;
+	line-height: 35px;
+}
+.container {
+  width: 950px;
+  margin: 0 auto;
+  padding: 0 25px;
+  background: #fff url('img/border-bg.png') repeat-x;
+}
+.wrapper {
+    background: #fff;
+}
+#header {
+    position:relative;
+    background: transparent url('img/logo.jpg') no-repeat scroll left top;
+    height: 245px;
+}
+#header .nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-align: right;
+}
+
+#header .nav a {
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+#header .nav div.welcome {
+    font-size: 18px;
+    font-family: Geneva;
+}
+#header h1 {
+	font-family: Gotham;
+    padding: 20px 10px;
+    margin: 0;
+    font-size: 120px;
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#menu, #submenu {
+	padding-left: 20px;
+	list-style: none;
+    margin: 0;
+}
+
+#menu-wrapper {
+	background: gray url('img/menu-bg.png') repeat-x;
+	height: 86px;
+}
+
+
+#menu {
+    line-height: 1;
+    font-size: 16px;
+    height: 50px;
+}
+
+#menu li {
+    float: left;
+    border-left: #bdbdbd 1px solid;
+}
+
+#menu li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+}
+
+#menu li.active, #menu li:hover {
+    background: gray url('img/menu-active-item.png') repeat-x;
+}
+
+#menu li.active a {
+    color: #b8e120;
+}
+
+#submenu {
+	padding-left: 30px;
+    background: transparent;
+    font-size: 14px;
+    height: 25px;
+    color: #222222;
+}
+
+#submenu li {
+	background: #fff url('img/submenu-bg.png') repeat-x;
+    float: left;
+    margin-right: 10px;
+    border-left: #bdbdbd 1px solid;
+}
+
+#submenu li a {
+    color: #222222;
+    padding: 3px 20px 2px;
+    display: block;
+}
+
+#submenu li.active, #submenu li:hover {
+    background: white;
+}
+
+#content {
+    padding: 20px;
+}
+
+#content.width100 {
+    padding: 20px 0;
+}
+
+ul.errorlist, .status_message {
+    color: red;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+p.help_text {
+    font-size: 10px;
+    color: gray;
+    line-height: 14px;
+}
+
+#accordion .header {
+    background: #EEEEEE url('img/accordion-header.png') repeat-x;
+    font-weight:bold;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: #000;
+    text-transform: uppercase;
+    height: 14px;
+}
+#accordion .header span.title {
+    display:block;
+    font-size: 12px;
+}
+
+#accordion .header span.arrow {
+    background: url(img/arrow-open.png) no-repeat;
+    height: 10px;
+    width: 20px;
+}
+
+#accordion .header.closed span.arrow {
+    background: url(img/arrow-close.png) no-repeat;
+    height: 15px;
+    width: 20px;
+}
+
+#accordion div.accordion-content {
+    padding-left: 30px;
+}
+
+#accordion div.accordion-content .header {
+    background: #fff url('img/accordion-subheader.png') no-repeat;
+    padding-top: 20px;
+    clear: both;
+}
+
+#accordion div.accordion-content .header span.arrow {
+    background: url(img/black-arrow.png) no-repeat;
+}
+
+#accordion div.accordion-content .header.closed span.arrow {
+    background: url(img/black-arrow-closed.png) no-repeat;
+}
+
+.value {
+    padding-top:4px;
+}
+
+.ui-datepicker-trigger {
+    margin-left:5px;
+    vertical-align:middle;
+}
+
+.text-right {
+    text-align: right;
+}
+
+form .fields input[type="text"].datefield {
+    width: 134px;
+}
+
+form .fields input[type="text"].currencyfield {
+    width: 130px;
+}
+
+table thead tr th, table thead tr {
+    background-color: #f0f6fc;
+    border-bottom: solid 1px #d8e1ef;
+    text-transform: uppercase;
+}
+
+table tbody tr td {
+    border-bottom: dotted 1px gray;
+}
+
+table.main tr.dark {
+    background-color: #F0F6FC;
+}
+
+table.main tr.light {
+}
+
+table.main tr.state-hover {
+    background-color: #D8E1EF;
+}
+
+table.main tr.clickable, table.main th.ordering {
+    cursor: pointer;
+}
+
+.paging, .paging a {
+    color: #282828;
+}
+
+.paging a.active {
+    color: #99cc33;
+    font-weight: bold;
+}
+
+.mt10 {
+    margin-top: 10px;
+}

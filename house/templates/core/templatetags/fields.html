@@ -1,0 +1,11 @@
+{% for field in fields %}
+<li class="clearfix">
+    <div class="span-40"><div class="label">
+        {% if field.field.required %}*{% endif %}{{ field.label_tag }}
+    </div></div>
+    <div class="span-60">
+        {{ field }}
+        {{ field.errors }}
+    </div>
+</li>
+{% endfor %}

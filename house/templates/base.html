@@ -1,0 +1,71 @@
+{% load i18n %}
+{% load static_extras %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}{% trans "Seesaw" %}{% endblock %}</title>
+
+        {% static 'blueprint' %}
+        {% static 'jquery' %}
+        {% static 'jquery.ui' %}
+        {% static 'jquery.form' %}
+
+        {% css 'common/grid.css' %}
+        {% css 'common/forms.css' %}
+        {% css 'common/style.css' %}
+        {% js 'common/menu.js' %}
+        {% js 'common/popup.js' %}
+
+        {% css 'common/grid.css' %}
+        {% css 'common/forms.css' %}
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#menu").configure_menu();
+                {% block extra_document_ready %}
+                {% endblock %}
+            });
+        </script>
+        {% block extra_head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                {% block header %}
+                    <div id="header">
+                        <h1>House</h1>
+                        <div class="nav">
+                            {% if user.is_authenticated %}
+                                <a href="{% url auth_logout %}">{% trans "Sign out" %}</a><a href="#">{% trans "Help" %}</a>
+                                <div class="welcome">{% blocktrans with user.username as name %}Welcome {{ name }}{% endblocktrans %}</div>
+                            {% else %}
+                                <a href="{% url auth_login %}">{% trans "Sign in" %}</a><a href="#">{% trans "Help" %}</a>
+                            {% endif %}
+                        </div>
+                        <div id="menu-wrapper">
+	                        {% block menu %}
+		                         <ul id="menu" class="clearfix">
+                                    <li><a href="#" %}">{% trans "About us" %}</a></li>
+                                 </ul>
+	                    	{% endblock %}
+	                    	{% block submenu %}
+	                    	{% endblock %}
+                    	</div>
+                    </div>
+                {% endblock %}
+               <div id="content" class="clearfix {% block content_class %}{% endblock %}">
+                {% block content %}
+                {% endblock %}
+               </div>
+               <div id="footer">
+                {% block footer %}
+                
+                {% endblock %}
+               </div>
+            </div>
+        </div>
+    </body>
+</html>

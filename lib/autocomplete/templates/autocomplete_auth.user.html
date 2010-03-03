@@ -1,0 +1,32 @@
+{% block content %}
+{% block field %}<input type="hidden" name="{{ name }}" id="{{ html_id }}_hidden" />
+<input type="text" name="{{ name }}_text" id="{{ html_id }}" />
+{% endblock %}
+<script type="text/javascript"><!--
+    {% block before_autocomplete %}{% endblock %}
+    {% block autocomplete %}$('#{{ html_id }}').autocomplete('{{ url }}', {{ options }}){% endblock %}
+    {% block after_autocomplete %}
+    function {{ name }}_formatItem(row) {
+        return row[2]
+    }
+    function {{ name }}_formatResult(row) {
+        return row[1]
+    }
+    $('#{{ html_id }}').setOptions({
+        formatItem: {{ name }}_formatItem,
+        formatResult: {{ name }}_formatResult,
+        extraParams: {exclude: ['projects_user=' + project_pk],
+                      fields: ['username', 'first_name', 'last_name', 'email'],
+                      order_by: ['username']}
+    })
+    $('#{{ html_id }}').result(function(event, data, formatted) {
+        $('#{{ html_id }}_hidden').val(data[0])
+        $('#{{ html_id }}').val(data[1])
+    })
+    $('#{{ html_id }}').blur(function() {
+        if (!$(this).val())
+            $('#{{ html_id }}_hidden').val('')
+    })
+    {% endblock after_autocomplete %}
+--></script>
+{% endblock content %}

@@ -1,0 +1,24 @@
+tr.overdue td {
+	background-color: #FBDEE1;
+}
+
+.paging ul {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.paging ul li {
+	float: left;
+	margin-right: 5px;
+}
+
+.names input {
+	display: block;
+}
+
+a.edit-btn {
+    color: #999999;
+    font-weight: normal;
+    text-transform: none;
+}

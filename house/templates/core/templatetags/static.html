@@ -1,0 +1,43 @@
+{% spaceless %}
+{% load static_extras %}
+
+
+{% ifequal section 'jquery' %}
+    {% if debug %}
+        {% js 'external/jquery.js'%}
+    {% else %}
+        {% js 'external/jquery.min.js'%}
+    {% endif %}
+{% endifequal %}
+
+{% ifequal section 'jquery.ui' %}
+    {% css 'external/jquery-ui/redmond/jquery-ui.css' %}
+    {% if debug %}
+        {% js 'external/jquery-ui/jquery-ui.js'%}
+    {% else %}
+        {% js 'external/jquery-ui/jquery-ui.min.js'%}
+    {% endif %}
+{% endifequal %}
+
+{% ifequal section 'jquery.form' %}
+    {% js 'external/jquery.form.js'%}
+{% endifequal %}
+
+{% ifequal section 'jquery.autocomplete' %}
+    {% css 'common/autocomplete/jquery.autocomplete.css' %}
+    {% if debug %}
+        {% js 'common/autocomplete/jquery.autocomplete.js' %}
+    {% else %}
+        {% js 'common/autocomplete/jquery.autocomplete.min.js' %}
+    {% endif %}
+{% endifequal %}
+
+{% ifequal section 'blueprint' %}
+    {% css 'external/blueprint/src/reset.css' 'screen, projection' %}
+    {% css 'external/blueprint/src/forms.css' 'screen, projection' %}
+    {% css 'external/blueprint/src/typography.css' 'screen, projection' %}
+    {% css 'external/blueprint/print.css' 'print' %}
+    <!--[if IE]>{% css 'external/blueprint/ie.css' 'screen, projection' %}<![endif]-->
+{% endifequal %}
+
+{% endspaceless %}

@@ -1,0 +1,17 @@
+tr.overdue td {
+    background-color: #EFB3B3;
+}
+
+table {
+	border-collapse:separate;
+	border-spacing:0;
+	width: 100%;
+}
+th, td {
+    text-align:left;
+    padding:4px 10px 4px 5px;
+}
+tfoot td {
+	text-align: right;
+	padding-top: 20px;
+}

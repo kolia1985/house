@@ -1,0 +1,28 @@
+[
+    {
+        "pk": 1,
+        "model": "sites.site",
+        "fields": {
+            "domain": "roa.staging.khavr.com",
+            "name": "roa.staging.khavr.com"
+        }
+    },
+   {
+      "pk": 1,
+      "model": "auth.user",
+      "fields": {
+       "username": "admin",
+       "first_name": "Admin",
+       "last_name": "Admin",
+       "is_active": true,
+       "is_superuser": true,
+       "is_staff": true,
+       "last_login": "2009-06-12 07:08:32",
+       "groups": [1],
+       "user_permissions": [],
+       "password": "sha1$5f798$5e6ad79b3a024360a274642b7b82dad137025d82",
+       "email": "admin@house.com",
+       "date_joined": "2009-06-12 07:08:13"
+      }
+    }
+]

@@ -1,0 +1,27 @@
+h4 a {
+    color: #282828;
+    font-weight: bold;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 0 0.5em;
+    margin: 0;
+}
+
+.company-title a {
+    display: block;
+    font-size: 1.2em;
+}
+.company-title .company-action {
+    text-align: right;
+}
+
+#accordion .header .action {
+    text-align: right;
+}
+
+#accordion .header .action a {
+    color: black;
+    text-transform: none;
+    font-weight: normal;
+}

@@ -1,0 +1,38 @@
+h1 {
+    margin: 10px 0;
+}
+
+.author, .position {
+    font-weight: bold;
+}
+
+.author {
+    font-size: 120%;
+}
+
+.skip_assigment tfoot td.total {
+    text-align: right;
+}
+
+#search-form ul {
+    list-style: none;
+}
+
+.details {
+    padding: 0 20px;
+}
+
+.details .status, .details .comments {
+    background-color: #F5FFEF;
+    border: #DBDFD8 1px solid;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.details .status .label {
+    text-transform: uppercase;
+}
+
+#borrower-form #id_borrower-middle_initial {
+    width: 40px;
+}

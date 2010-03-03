@@ -1,0 +1,29 @@
+.user-form {
+    margin: 20px 0;
+}
+
+#company-info-form h3 {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#company-info-form input[type=text], #company-info-form input[type=password], 
+#company-info-form select {
+    width: 100%
+}
+#company-info-form .separator {
+    border-bottom: 1px dashed #ccc;
+    margin: 20px 0;
+    height: 10px;
+}
+#company-info-form h3{
+    border-top: 1px dashed #ccc;
+    margin: 20px 0;
+    padding: 10px 0;
+    line-height: 1;
+}
+
+#company-info-form textarea {
+    height: 25px;
+}
