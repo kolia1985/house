@@ -9,6 +9,8 @@ urlpatterns = patterns('',
    #admin
     (r'^admin/', include(admin.site.urls)),
     (r'^', include('core.urls')),
+    (r'^', include('wall.urls')),
+    (r'^', include('material.urls')),
     (r'^', include('registration.urls')),
 
 )

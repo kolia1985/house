@@ -48,6 +48,10 @@ class WallType(models.Model):
     name = models.CharField(_('Name'), max_length=100)
     walling_material = models.ManyToManyField(WallingMaterial, through='WallMaterial')
 
+    @property
+    def cost(self):
+        return 10.0
+
     def unicode(self):
         return u"%s" % self.name
 

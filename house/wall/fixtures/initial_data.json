@@ -1,0 +1,23 @@
+[
+ {
+  "pk": 1,
+  "model": "wall.walltype",
+  "fields": {
+   "name": "\u0413\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d 300 \u043c\u043c"
+  }
+ },
+ {
+  "pk": 2,
+  "model": "wall.walltype",
+  "fields": {
+   "name": "\u0413\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d 375 \u043c\u043c"
+  }
+ },
+ {
+  "pk": 3,
+  "model": "wall.walltype",
+  "fields": {
+   "name": "\u0413\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d 400 \u043c\u043c"
+  }
+ }
+]

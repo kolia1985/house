@@ -60,6 +60,7 @@ INSTALLED_APPS = (
     'house.roof',
     'house.utils',
     'house.wall',
+    'house.sortedtable',
 )
 
 

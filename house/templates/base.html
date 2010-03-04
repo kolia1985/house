@@ -48,7 +48,10 @@
                         <div id="menu-wrapper">
 	                        {% block menu %}
 		                         <ul id="menu" class="clearfix">
-                                    <li><a href="#" %}">{% trans "About us" %}</a></li>
+                                    <li><a href="/" %}">{% trans "Projects" %}</a></li>
+                                    <li><a href="{% url wall_type_list %}" %}">{% trans "Wall" %}</a></li>
+                                    <li><a href="{% url material_list %}" %}">{% trans "Material" %}</a></li>
+                                    <li><a href="" %}">{% trans "About us" %}</a></li>
                                  </ul>
 	                    	{% endblock %}
 	                    	{% block submenu %}

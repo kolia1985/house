@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h3>{% trans "WallingMaterial" %}</h3>
+    {{ wallingmaterial_table.table }}
+    <h3>{% trans "Armature" %}</h3>
+    {{ armature_table.table }}
+{% endblock %}

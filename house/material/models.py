@@ -8,7 +8,7 @@ class Material(models.Model):
     cost = CurrencyField(_('Cost'))
     density = models.FloatField(null=True, blank=True)
 
-    def unicode(self):
+    def __unicode__(self):
         return u"%s" % self.name
 
     class Meta:
@@ -22,6 +22,10 @@ class RectangularMaterial(Material):
     height = models.FloatField(_('Height'))
     width = models.FloatField(_('width'))
     length = models.FloatField(_('length'))
+
+    @property
+    def volume(self):
+        return self.height * self.width * self.length * 0.000000001
 
     class Meta:
         abstract = True
@@ -47,7 +51,7 @@ class BulkMaterial(Material):
 class WallingMaterialType(models.Model):
     name = models.CharField(_('Name'), max_length=100)
 
-    def unicode(self):
+    def __unicode__(self):
         return u"%s" % self.name
 
 
@@ -57,10 +61,11 @@ class WallingMaterial(RectangularMaterial):
                                      null=True, blank=True)
 
 
+
 class SlurryMaterialType(models.Model):
     name = models.CharField(_('Name'), max_length=100)
 
-    def unicode(self):
+    def __unicode__(self):
         return u"%s" % self.name
 
 class SlurryMaterial(Material):

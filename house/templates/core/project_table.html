@@ -1,0 +1,29 @@
+<table class="sorted-table{% block css_class %}{% endblock %}">
+    <thead>
+        <tr>
+        {% block thead %}
+            {% for field, checked, name, ordering in fields %}
+                <th {% spaceless %}{% if ordering %} id="{{ ordering }}"{% endif %}
+                    {% if checked or ordering %} class="{% if checked %}checked{% endif %}{% if ordering %} ordering{% endif %}"
+                    {% endif %}{% endspaceless %}>{{ name }}</th>
+            {% endfor %}
+        {% endblock %}
+        </tr>
+    </thead>
+    <tbody>
+    {% block tbody %}
+        {% if not obj_list %}
+            <tr><td>Objects not found</td></tr>
+        {% endif %}
+        {% for row, item in obj_list %}
+            <tr>
+                <td><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></td>
+                {% for field in row|slice:"1:" %}
+                    <td>{{ field }}</td>
+                {% endfor%}
+            </tr>
+        {% endfor %}
+    {% endblock %}
+    </tbody>
+    
+</table>

@@ -1,0 +1,13 @@
+{% if paginator.has_previous %}
+	<span class="prev-page" id="page_{{ paginator.previous_page_number }}">&lt;&lt;</span>
+{% endif %}
+{% for page in paginator.paginator.page_range %}
+	{% ifequal paginator.number page %}
+		{{ page }}
+	{% else %}
+   		<a href="#" class="page">{{ page }}</a>
+   	{% endifequal %}
+{% endfor %}
+{% if paginator.has_next%}
+	<span class="next-page" id="page_{{ paginator.next_page_number }}" >&gt;&gt;</span>
+{% endif %}

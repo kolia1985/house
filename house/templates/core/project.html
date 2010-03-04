@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
-asdasdsad
+    <h3>{% trans "Floors" %}</h3>
+    {{ floor_table.table }}
 {% endblock %}
