@@ -33,5 +33,35 @@
    "type": 1,
    "conductivity": null
   }
+ },                                                                                                        
+ {                                                                                                         
+  "pk": 1,                                                                                                 
+  "model": "material.armature",                                                                            
+  "fields": {                                                                                              
+   "diameter": 8.0,                                                                                        
+   "cost": "5200",                                                                                         
+   "name": "A III 8",
+   "density": null
+  }
+ },
+ {
+  "pk": 2,
+  "model": "material.armature",
+  "fields": {
+   "diameter": 10.0,
+   "cost": "5200",
+   "name": "A III 10",
+   "density": null
+  }
+ },
+ {
+  "pk": 3,
+  "model": "material.armature",
+  "fields": {
+   "diameter": 12.0,
+   "cost": "5200",
+   "name": "A III 12",
+   "density": null
+  }
  }
 ]

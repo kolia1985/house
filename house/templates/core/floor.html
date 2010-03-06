@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n static_extras %}
+
+{% block extra_head %}
+    {% js 'external/raphael-min.js' %}
+{% endblock %}
+
+{% block extra_document_ready %}
+    priv = function(x){
+        mod = x % 15;
+        if (mod < 7){
+            x = x - mod;
+        } else {
+            x = x + (15 -mod);
+        }
+        return x;
+    }
+    var offset = $("#canvas").offset();
+    var paper = Raphael("canvas",920,620);
+    for (i=0;i<=30;i++){
+        paper.path("M"+30*i+" 0L"+30*i+" 600").attr({stroke: "#B8E120"});
+    }
+    for (i=0;i<=20;i++){
+        paper.path("M0 "+30*i+"L900 "+30*i).attr({stroke: "#B8E120"});
+    }
+    $("#canvas").mousedown(function(event){
+        sx = event.pageX + 7 - offset.left;
+        sy = event.pageY - offset.top;
+    });
+    $("#canvas").mouseup(function(event){
+        fx = (event.pageX + 7- offset.left) - sx;
+        fy = (event.pageY - offset.top) - sy;
+        var c = paper.rect(priv(sx), priv(sy), priv(fx), priv(fy));
+    });
+    
+    
+ 
+{% endblock %}
+
+{% block content %}
+    <h3>{{ floor.name }}</h3>
+    <div id="canvas"></div>
+{% endblock %}
